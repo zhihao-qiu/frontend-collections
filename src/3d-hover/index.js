@@ -10,7 +10,6 @@ function ThreedHover() {
   const xRange = [-25, 25];
 
   function handleMouseOver(e) {
-    console.log('yes');
     const rx = getRotateDeg(xRange, e.nativeEvent.offsetY, e.target.offsetHeight);
     const ry = -getRotateDeg(yRange, e.nativeEvent.offsetX, e.target.offsetWidth);
     setRotation({ rx, ry });
