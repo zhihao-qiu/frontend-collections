@@ -6,6 +6,7 @@ function ListPage() {
     <div className="App-header">
       <ul>
         <li><Link to="/3d-hover">3D Hover</Link></li>
+        <li><Link to="/SimpleMap">Simple Canada Map</Link></li>
       </ul>
     </div>
   );
