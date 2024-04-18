@@ -53,6 +53,7 @@ function SimpleMap() {
       },
       series: [{
         type: 'map',
+        width: '50%',
         map: 'canada',
         roam: true,
         scaleLimit: {
