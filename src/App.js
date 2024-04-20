@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ThreedHover from './ThreeDHover';
 import SimpleMap from './SimpleMap';
 import Landing from './Landing';
+import BgImgScrolling from './BgImgScrolling'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/ThreedHover" element={<ThreedHover />} />
             <Route path="/SimpleMap" element={<SimpleMap />} />
+            <Route path="/BgImgScrolling" element={<BgImgScrolling />} />
           </Routes>
 
         </div>
