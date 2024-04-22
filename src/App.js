@@ -6,6 +6,7 @@ import ThreedHover from './ThreeDHover';
 import SimpleMap from './SimpleMap';
 import Landing from './Landing';
 import BgImgScrolling from './BgImgScrolling'
+import ClipPath from './ClipPath'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/ThreedHover" element={<ThreedHover />} />
             <Route path="/SimpleMap" element={<SimpleMap />} />
             <Route path="/BgImgScrolling" element={<BgImgScrolling />} />
+            <Route path="/ClipPath" element={<ClipPath />} />
           </Routes>
 
         </div>
