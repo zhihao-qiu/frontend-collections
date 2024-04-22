@@ -1,0 +1,88 @@
+.container1 {
+  width: 600px;
+  height: 375px;
+  margin: 0 auto;
+  background-color: #14100f;
+}
+
+.box1 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transition: 0.5s;
+}
+
+.container1:hover .box1 {
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.container2 {
+  width: 600px;
+  height: 375px;
+  margin: 0 auto;
+  background-color: #14100f;
+}
+
+.box2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  clip-path: ellipse(50% 0% at 50% 50%);
+}
+
+@keyframes wink {
+  15% {
+    clip-path: ellipse(50% 1% at 50% 50%);
+  }
+
+  30% {
+    clip-path: ellipse(50% 19% at 50% 50%);
+  }
+
+  45% {
+    clip-path: ellipse(50% 1% at 50% 50%);
+  }
+
+  70% {
+    clip-path: ellipse(50% 40% at 50% 50%);
+  }
+}
+
+.container2:hover .box2 {
+  animation: wink 3s infinite;
+}
+
+.container3 {
+  width: 600px;
+  height: 375px;
+  margin: 0 auto;
+  background: url(./pic/horse.jpeg) no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 100px;
+}
+
+.container3 h1 {
+  color:transparent;
+  font-size: 5em;
+}
+
+@keyframes slidedown {
+  0% {
+    clip-path: inset(100% 0% 0% 0%);
+    transform: translateY(-100%);
+  }
+
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform: translateY(0);
+  }
+}
+
+.container3:hover h1{
+  color:cornsilk;
+  animation: slidedown 2s forwards;
+}
