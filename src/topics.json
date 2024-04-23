@@ -1,0 +1,22 @@
+[
+  {
+    "topic_name": "ThreedHover",
+    "main_topic": "3D Hover Card",
+    "desc": "Hover over the card to see the 3D effect"
+  },
+  {
+    "topic_name": "SimpleMap",
+    "main_topic": "Simple Canadian Map",
+    "desc": "A simple presentation of the population distribution of Canada by province in 2021"
+  },
+  {
+    "topic_name": "BgImgScrolling",
+    "main_topic": "BgImgScrolling",
+    "desc": "Hover over the card to see the 3D effect"
+  },
+  {
+    "topic_name": "Clippath",
+    "main_topic": "Clip-Path Effects",
+    "desc": "Hover over the images to see the effect"
+  }
+]
