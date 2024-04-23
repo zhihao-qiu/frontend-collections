@@ -9,7 +9,10 @@ import { useEffect, useState } from 'react';
 // Store background images in an array
 const BgImg = [BgImg1, BgImg2, BgImg3, BgImg4, BgImg5];
 
-function BgImgScrolling() {
+const BgImgScrolling = ({ setTopic }) => {
+  useEffect(() => {
+    setTopic('BgImgScrolling');
+  }, [setTopic]);
 
   const [currIndex, setCurrIndex] = useState(0);
   const [wheelDirection, setWheelDirection] = useState('');
@@ -25,7 +28,7 @@ function BgImgScrolling() {
   }
 
   useEffect(() => {
-    const containerDiv  = document.querySelector('.scroll-container');
+    const containerDiv = document.querySelector('.scroll-container');
 
     if (wheelDirection && !isWheeling) {
       setIsWheeling(true);
@@ -40,7 +43,7 @@ function BgImgScrolling() {
         nextImg.src = BgImg[getNextIndex()];
         setIsWheeling(false);
       }, 1000);
-   };
+    };
   }, [currIndex, wheelDirection]);
 
   return (
@@ -65,6 +68,6 @@ function BgImgScrolling() {
       </div>
     </div>
   );
-}
+};
 
 export default BgImgScrolling;

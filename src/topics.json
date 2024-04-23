@@ -11,8 +11,8 @@
   },
   {
     "topic_name": "BgImgScrolling",
-    "main_topic": "BgImgScrolling",
-    "desc": "Hover over the card to see the 3D effect"
+    "main_topic": "Image scrolling by wheel",
+    "desc": "Using wheel to scroll the background images(scroll up is not ready)"
   },
   {
     "topic_name": "Clippath",
