@@ -8,7 +8,10 @@ import { CanvasRenderer } from 'echarts/renderers';
 import canadaMapData from './georef-canada-province.json';
 import populationsData from './populations.json';
 
-function SimpleMap() {
+const SimpleMap = ({ setTopic }) => {
+  useEffect(() => {
+    setTopic('SimpleMap');
+  }, [setTopic]);
 
   function getGeoData() {
     echarts.use([MapChart, TooltipComponent, TitleComponent, VisualMapComponent, CanvasRenderer]);
@@ -53,12 +56,12 @@ function SimpleMap() {
       },
       series: [{
         type: 'map',
-        width: '50%',
+        width: '60%',
         map: 'canada',
         roam: true,
         scaleLimit: {
           min: 1,
-          max: 10.0,
+          max: 10,
         },
         data: populationsData
       }],
@@ -71,9 +74,11 @@ function SimpleMap() {
   }, []);
 
   return (
-    <div className='geo' >
+    <div className="w-full mt-4">
+      <div className='geo'>
+      </div>
     </div>
   );
-}
+};
 
 export default SimpleMap;
