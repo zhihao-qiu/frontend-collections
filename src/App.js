@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 import ListPage from './ListPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Topic from './Topic';
 import ThreedHover from './ThreeDHover';
 import SimpleMap from './SimpleMap';
 import BgImgScrolling from './BgImgScrolling';
 import ClipPath from './ClipPath';
-import Topic from './Topic';
+import SmileRatings from './SmileRatings';
 
 function App() {
   const [topic, setTopic] = useState('');
@@ -23,6 +24,7 @@ function App() {
             <Route path="/SimpleMap" element={<SimpleMap setTopic={setTopic} />} />
             <Route path="/BgImgScrolling" element={<BgImgScrolling setTopic={setTopic} />} />
             <Route path="/ClipPath" element={<ClipPath setTopic={setTopic} />} />
+            <Route path="/SmileRatings" element={<SmileRatings setTopic={setTopic} />} />
           </Routes>
 
         </div>

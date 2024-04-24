@@ -18,5 +18,10 @@
     "topic_name": "Clippath",
     "main_topic": "Clip-Path Effects",
     "desc": "Hover over the images to see the effect"
+  },
+  {
+    "topic_name": "SmileRatings",
+    "main_topic": "Smile Ratings",
+    "desc": "Use latency for complex animations"
   }
 ]
