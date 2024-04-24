@@ -1,7 +1,10 @@
-.container1 {
-  width: 600px;
-  height: 375px;
-  margin: 0 auto;
+.container1, .container2, .container3{
+  width: 30%;
+  height: 300px;
+  margin: 20px 20px;
+}
+
+.container1, .container2 {
   background-color: #14100f;
 }
 
@@ -15,13 +18,6 @@
 
 .container1:hover .box1 {
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
-}
-
-.container2 {
-  width: 600px;
-  height: 375px;
-  margin: 0 auto;
-  background-color: #14100f;
 }
 
 .box2 {
@@ -54,11 +50,8 @@
 }
 
 .container3 {
-  width: 600px;
-  height: 375px;
-  margin: 0 auto;
   background: url(./pic/horse.jpeg) no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -67,7 +60,7 @@
 
 .container3 h1 {
   color:transparent;
-  font-size: 5em;
+  font-size: 3em;
 }
 
 @keyframes slidedown {
