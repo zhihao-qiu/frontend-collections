@@ -1,0 +1,119 @@
+.face {
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+  background-color: red;
+  margin-bottom: 50px;
+  animation: face 1s linear var(--delay) paused;
+
+  position: relative;
+}
+
+.lefteye {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  background-color: #fff;
+  animation: lefteye 1s linear var(--delay) paused;
+
+  position: absolute;
+  top: 52%;
+  left: 53.5%;
+}
+
+.righteye {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  background-color: #fff;
+  animation: righteye 1s linear var(--delay) paused;
+
+  position: absolute;
+  top: 52%;
+  left: 56.5%;
+}
+
+.mouth {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+
+  top: 54%;
+  left: 55%;
+  border-radius: 32px;
+  box-shadow: inset 0 2px 0 #fff;
+  animation: mouth 1s linear var(--delay) paused;
+
+  transform: translate(-50%, -50%);
+}
+
+input[type='range'] {
+  accent-color: #811515;
+  width: 230px;
+  height: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+@keyframes face {
+  0% {
+    background: #df1010;
+  }
+
+  50% {
+    background: rgb(233, 236, 12);
+  }
+
+  to {
+    background: rgb(49, 202, 19);
+  }
+}
+
+@keyframes lefteye {
+  0% {
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes righteye {
+  0% {
+    clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes mouth {
+0%{
+  transform: translateY(30px);
+}
+  50% {
+    height: 4px;
+    box-shadow: inset 0 4px 0 #fff;
+    transform: translateY(40px);
+    clip-path: inset(0 0 0 0);
+  }
+
+  50.1% {
+    height: 4px;
+    box-shadow: inset 0 -4px 0 #fff;
+    transform: translateY(40px);
+    clip-path: inset(50% 0 0 0);
+  }
+
+  to {
+    height: 50px;
+    box-shadow: inset 0 -50px 0 #fff;
+    transform: translateY(0);
+    clip-path: inset(50% 0 0 0);
+  }
+}
