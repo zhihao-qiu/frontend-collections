@@ -19,7 +19,7 @@
   animation: lefteye 1s linear var(--delay) paused;
 
   position: absolute;
-  top: 52%;
+  top: 35%;
   left: 53.5%;
 }
 
@@ -32,7 +32,7 @@
   animation: righteye 1s linear var(--delay) paused;
 
   position: absolute;
-  top: 52%;
+  top: 35%;
   left: 56.5%;
 }
 
@@ -41,7 +41,7 @@
   width: 32px;
   height: 32px;
 
-  top: 54%;
+  top: 38%;
   left: 55%;
   border-radius: 32px;
   box-shadow: inset 0 2px 0 #fff;
@@ -51,7 +51,7 @@
 }
 
 input[type='range'] {
-  accent-color: #811515;
+  /* accent-color: #811515; */
   width: 230px;
   height: 4px;
   border-radius: 2px;
