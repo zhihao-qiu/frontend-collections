@@ -1,17 +1,51 @@
 import './App.css';
-import { Link } from 'react-router-dom';
 
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 
 function ListPage() {
+  const hoverItem ={
+    borderRadius:2,
+    '&:hover, &:focus': { bgcolor: 'rgba(39, 119, 245, 0.8)',
+    color: 'white',
+    },
+  }
 
   return (
-    <div className="h-screen flex flex-col items-center bg-gray-100">
-      <div className='mb-4 mt-4'><Link to="/" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold w-60 py-2 px-4 rounded-full">3D Hover</Link></div>
-      <div className='mb-4'><Link to="/SimpleMap" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold w-60 py-2 px-4 rounded-full">Simple Canada Map</Link></div>
-      <div className='mb-4'><Link to="/BgImgScrolling" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold w-60 py-2 px-4 rounded-full">Background Image Scrolling</Link></div >
-      <div className='mb-4'><Link to="/ClipPath" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold w-60 py-2 px-4 rounded-full">ClipPath</Link></div>
-      <div className='mb-4'><Link to="/SmileRatings" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold w-60 py-2 px-4 rounded-full">Smile Ratings</Link></div>
-    </div >
+
+    <Box sx={{ width: '100%', maxWidth: 280, height: '100%',  padding: 2, borderRight: 0, backgroundColor: 'black', color: 'white'}}>
+      <List>
+        <ListItem disablePadding sx={{ ...hoverItem } } >
+          <ListItemButton component="a" href="/">
+            <ListItemText primary="3D Hover" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="/SimpleMap" sx={{ ...hoverItem } } >
+            <ListItemText primary="Simple Canada Map" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="/BgImgScrolling" sx={{ ...hoverItem } } >
+            <ListItemText primary="Background Image Scrolling" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="/ClipPath" sx={{ ...hoverItem } } >
+            <ListItemText primary="ClipPath Effect" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="/SmileRatings" sx={{ ...hoverItem } } >
+            <ListItemText primary="Smile Ratings" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+
+    </Box>
   );
 }
 

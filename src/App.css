@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: row;
   text-align: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .App-logo {
@@ -49,25 +49,6 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
-
-
-.main-content {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  flex-grow: 1;
-}
-
-.list-group {
-  margin-left: 20px;
-  margin-right: 10px;
-  margin-top: 20px;
-
-  font-size: large;
-  text-align: left;
 }
 
 .landing {
