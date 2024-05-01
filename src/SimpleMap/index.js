@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import '../App.css';
 import './SimpleMap.css';
 import * as echarts from 'echarts/core';
 import { MapChart } from 'echarts/charts';
@@ -7,6 +6,7 @@ import { TooltipComponent, TitleComponent, VisualMapComponent } from 'echarts/co
 import { CanvasRenderer } from 'echarts/renderers';
 import canadaMapData from './georef-canada-province.json';
 import populationsData from './populations.json';
+import Box from '@mui/material/Box';
 
 const SimpleMap = ({ setTopic }) => {
   useEffect(() => {
@@ -74,10 +74,18 @@ const SimpleMap = ({ setTopic }) => {
   }, []);
 
   return (
-    <div className="w-full mt-4">
-      <div className='geo'>
-      </div>
-    </div>
+    <Box sx={
+      {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'left',
+        alignItems: 'center',
+        marginBottom: '100px',
+      }}>
+      <Box className="geo">
+      </Box>
+    </Box>
   );
 };
 
