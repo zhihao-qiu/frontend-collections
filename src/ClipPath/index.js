@@ -3,6 +3,8 @@ import '../App.css';
 import './ClipPath.css';
 import city from './pic/city.jpeg';
 import baby from './pic/baby.jpeg';
+import { Box } from '@mui/material';
+
 
 const ClipPath = ({ setTopic }) => {
   useEffect(() => {
@@ -10,17 +12,25 @@ const ClipPath = ({ setTopic }) => {
   }, [setTopic]);
 
   return (
-    <div className='flex flex-row'>
-      <div className='container1'>
+    <Box sx={
+      {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '100px',
+      }}>
+      <Box component="div" className='container1'>
         <img src={city} alt="city" className='box1' />
-      </div>
-      <div className='container2'>
+      </Box>
+      <Box component="div" className='container2'>
         <img src={baby} alt="baby" className='box2' />
-      </div>
-      <div className='container3'>
+      </Box>
+      <Box component="div" className='container3'>
         <h1>A horse in the war</h1>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
