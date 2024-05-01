@@ -102,7 +102,6 @@ const SmileRatings = ({ setTopic }) => {
           <Slider
             defaultValue={0.5}
             step={0.01}
-            marks
             min={0.00}
             max={0.99}
             sx = {{ width: 500 }}
