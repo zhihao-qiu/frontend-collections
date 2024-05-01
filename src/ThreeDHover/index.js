@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css';
 import './3dhover.css';
 import card from './pic/promo_swsh061.jpg';
 import { Box } from '@mui/system';
