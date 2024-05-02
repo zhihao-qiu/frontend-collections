@@ -1,0 +1,13 @@
+.card {
+  width: 200px;
+  border-radius: 10px;
+  transform: perspective(500px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: 0.3s;
+}
+.card img {
+  border-radius: inherit;
+  width: 100%;
+}
+.card:hover {
+  box-shadow: -3px -3px 10px #54a29e, 3px 3px 10px #a79d66;
+}

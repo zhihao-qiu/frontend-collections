@@ -43,6 +43,11 @@ function ListPage() {
             <ListItemText primary="Smile Ratings" />
           </ListItemButton>
         </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="/FlowingLightBoard" sx={{ ...hoverItem } } >
+            <ListItemText primary="Flowing Light Board" />
+          </ListItemButton>
+        </ListItem>
       </List>
 
     </Box>

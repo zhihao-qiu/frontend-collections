@@ -6,6 +6,7 @@ import SimpleMap from './SimpleMap';
 import BgImgScrolling from './BgImgScrolling';
 import ClipPath from './ClipPath';
 import SmileRatings from './SmileRatings';
+import FlowingLightBoard from './FlowingLightBoard';
 
 import Box from '@mui/material/Box';
 
@@ -20,6 +21,7 @@ const Content = () => {
         <Route path="/BgImgScrolling" element={<BgImgScrolling setTopic={setTopic} />} />
         <Route path="/ClipPath" element={<ClipPath setTopic={setTopic} />} />
         <Route path="/SmileRatings" element={<SmileRatings setTopic={setTopic} />} />
+        <Route path="/FlowingLightBoard" element={<FlowingLightBoard setTopic={setTopic} />} />
       </Routes>
     </Box>
   );

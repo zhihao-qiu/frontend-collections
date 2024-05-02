@@ -23,5 +23,10 @@
     "topic_name": "SmileRatings",
     "main_topic": "Smile Ratings",
     "desc": "Use latency for complex animations"
+  },
+  {
+    "topic_name": "FlowingLightBoard",
+    "main_topic": "Flowing Light Board",
+    "desc": "CSS Animation for Flowing Light Board"
   }
 ]
