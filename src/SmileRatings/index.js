@@ -93,18 +93,18 @@ const SmileRatings = ({ setTopic }) => {
           </Toolbar>
         </AppBar>
         <Container sx={{ my: 5, mx: 2, display: 'flex', flexDirection: 'Column', justifyContent: 'center', alignItems: 'center' }} color="text.secondary" align="center">
-          <div className='smile_face'>
+          <Container component="div" sx={{ position: 'relative'}}>
             <div className='face'></div>
             <div className='lefteye'></div>
             <div className='righteye'></div>
             <div className='mouth'></div>
-          </div>
+          </Container>
           <Slider
             defaultValue={0.5}
             step={0.01}
             min={0.00}
             max={0.99}
-            sx = {{ width: 500 }}
+            sx={{ width: 500 }}
             valueLabelDisplay="auto"
             valueLabelFormat={(value) => Math.floor(value * 100)}
             value={rangeValue}
