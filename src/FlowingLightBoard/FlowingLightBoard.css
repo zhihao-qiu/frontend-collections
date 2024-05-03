@@ -1,13 +1,41 @@
-.card {
-  width: 200px;
-  border-radius: 10px;
-  transform: perspective(500px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  transition: 0.3s;
+:root {
+  --bg-color: #000;
 }
-.card img {
-  border-radius: inherit;
-  width: 100%;
+
+.box {
+  padding: 15vmin 10vmin;
+  /* background: var(--bg-color); */
+  border-radius: 5vmin;
+  color: #66dd7f;
+  font-size: 8vmin;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
-.card:hover {
-  box-shadow: -3px -3px 10px #54a29e, 3px 3px 10px #a79d66;
+
+.box::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  background-color: #22292f;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  background-image: conic-gradient(transparent, #66ddf7, transparent 30%);
+  z-index: -2;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  inset: 1vmin;
+  background-color: var(--bg-color);
+  z-index: -1;
 }

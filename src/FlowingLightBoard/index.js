@@ -1,53 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import './FlowingLightBoard.css';
 import { Box } from '@mui/system';
+import { Button, Container } from '@mui/material';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-const ThreedHover = ({ setTopic }) => {
+const FlowingLightBoard = ({ setTopic }) => {
+  const [schema, setSchema] = useState('night');
+
   useEffect(() => {
     setTopic('FlowingLightBoard');
   }, [setTopic]);
 
-  const [rotation, setRotation] = useState({ rx: 0, ry: 0 });
+  useEffect(() => {
+    if (schema === 'night') {
+      document.documentElement.style.setProperty('--bg-color', '#000');
+    } else {
+      document.documentElement.style.setProperty('--bg-color', '#fff');
+    }
+  }, [schema]);
 
-  const yRange = [-20, 20];
-  const xRange = [-25, 25];
-
-  function handleMouseOver(e) {
-    const rx = getRotateDeg(xRange, e.nativeEvent.offsetY, e.target.offsetHeight);
-    const ry = -getRotateDeg(yRange, e.nativeEvent.offsetX, e.target.offsetWidth);
-    setRotation({ rx, ry });
-  }
-
-  function handleMouseLeave() {
-    setRotation({ rx: 0, ry: 0 });
-  }
-
-  function getRotateDeg(range, value, length) {
-    return (value / length) * (range[1] - range[0]) + range[0];
-  }
   return (
+
     <Box sx={
       {
         width: '100%',
         height: '100%',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
         alignItems: 'center',
-        marginBottom: '100px',
+        overflow: 'hidden',
+        boxSizing: 'border-box',
+        padding: 5,
+        ...(schema === 'night' && { bgcolor: '#000' }),
+        ...(schema === 'day' && { bgcolor: '#fff' }),
       }}>
-      <Box className="card"
-        style={{
-          '--rx': `${rotation.rx}deg`,
-          '--ry': `${rotation.ry}deg`
-        }}
-        onMouseMove={handleMouseOver}
-        onMouseLeave={handleMouseLeave}
-      >
-        <img src={card} alt="" />
-      </Box>
+      <Container component="div" sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', gap: 2, padding: 5 }}>
+        <Button variant="contained" color="secondary" sx={{ width: 150 }} startIcon={<LightModeIcon />} onClick={() => {
+          setSchema('day');
+        }}>Light On</Button>
+        <Button variant="contained" color="secondary" sx={{ width: 150 }} startIcon={<DarkModeIcon />} onClick={() => {
+          setSchema('night');
+        }}>Light Off</Button>
 
+      </Container>
+
+      <div className='box'>Flowing Light</div>
     </Box>
   );
 };
 
-export default ThreedHover;
+export default FlowingLightBoard;
