@@ -15,8 +15,10 @@ const FlowingLightBoard = ({ setTopic }) => {
   useEffect(() => {
     if (schema === 'night') {
       document.documentElement.style.setProperty('--bg-color', '#000');
+      document.documentElement.style.setProperty('--flowing-color', '#22292f');
     } else {
       document.documentElement.style.setProperty('--bg-color', '#fff');
+      document.documentElement.style.setProperty('--flowing-color', '#9bbb27');
     }
   }, [schema]);
 

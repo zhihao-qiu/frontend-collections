@@ -1,5 +1,6 @@
 :root {
   --bg-color: #000;
+  --flowing-color:#2c2f22;
 }
 
 .box {
@@ -17,7 +18,7 @@
   content: '';
   width: 200%;
   height: 200%;
-  background-color: #22292f;
+  background-color: var(--flowing-color);
   position: absolute;
   top: -50%;
   left: -50%;
