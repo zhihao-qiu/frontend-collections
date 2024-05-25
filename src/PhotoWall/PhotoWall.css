@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.container .imgbox {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  transition: .5s;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+}
+
+.container .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container:hover > :not(:hover) {
+  margin: 0 -20px;
+  filter: drop-shadow(0 0 25px #000) drop-shadow(0 0 45px #000);
+  transform: perspective(500px) rotateY(45deg) scale(0.8);
+}
+
+.container .imgbox:hover ~ .imgbox {
+  transform: perspective(500px) rotateY(-45deg) scale(0.8);
+}
+
+.container .imgbox:hover {
+  transform: perspective(500px) rotateY(0deg) scale(1.25);
+}
