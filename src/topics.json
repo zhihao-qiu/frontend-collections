@@ -28,5 +28,10 @@
     "topic_name": "FlowingLightBoard",
     "main_topic": "Flowing Light Board",
     "desc": "CSS Animation for Flowing Light Board"
+  },
+  {
+    "topic_name": "PhotoWall",
+    "main_topic": "Photo Wall Effect",
+    "desc": "CSS Animation for Flowing Light Board"
   }
 ]

@@ -48,6 +48,11 @@ function ListPage() {
             <ListItemText primary="Flowing Light Board" />
           </ListItemButton>
         </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="/PhotoWall" sx={{ ...hoverItem } } >
+            <ListItemText primary="Photo Wall" />
+          </ListItemButton>
+        </ListItem>
       </List>
 
     </Box>
