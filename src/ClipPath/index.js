@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import '../App.css';
 import './ClipPath.css';
 import city from './pic/city.jpeg';
 import baby from './pic/baby.jpeg';
@@ -19,7 +18,6 @@ const ClipPath = ({ setTopic }) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: '100px',
       }}>
       <Box component="div" className='container1'>
         <img src={city} alt="city" className='box1' />

@@ -5,6 +5,7 @@ import BgImg3 from './pic/bg3.png';
 import BgImg4 from './pic/bg4.jpeg';
 import BgImg5 from './pic/bg5.jpeg';
 import { useEffect, useState } from 'react';
+import { Box } from '@mui/material';
 
 // Store background images in an array
 const BgImg = [BgImg1, BgImg2, BgImg3, BgImg4, BgImg5];
@@ -47,6 +48,16 @@ const BgImgScrolling = ({ setTopic }) => {
   }, [currIndex, wheelDirection]);
 
   return (
+    <Box sx={
+      {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+
+
     <div className={`scroll-container ${wheelDirection}`} onWheel={e => {
       if (isWheeling || !e.deltaY) return;
       if (e.deltaY > 0) {
@@ -67,6 +78,7 @@ const BgImgScrolling = ({ setTopic }) => {
         <img src={BgImg[getNextIndex()]} alt='Background' />
       </div>
     </div>
+    </Box>
   );
 };
 
